@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const body = document.querySelector("body"),
+    const content = document.querySelector(".content"),
           main = document.querySelector(".main__page"),
           acc = document.querySelectorAll(".nav__item-header"),
           arrows = document.querySelectorAll(".item__header-arrow"),
@@ -38,14 +38,14 @@ document.addEventListener("DOMContentLoaded", () => {
             header.classList.add("header__menu-active");
             menu.classList.add("menu-active");
             hideContent(main);
-            body.style.backgroundImage = `url(./img/category-bg${j + 1}.jpg)`;
+            content.style.backgroundImage = `url(./img/category-bg${j + 1}.jpg)`;
             showContent(productsCat[j]);
         });
         menu.addEventListener("click", function () {
             header.classList.remove("header__menu-active");
             menu.classList.remove("menu-active");
             hideContent(productsCat[j]);
-            body.style.backgroundImage = "url(./img/main-bacground.jpg)";
+            content.style.backgroundImage = "url(./img/main-bacground.jpg)";
             showContent(main);
         });
     }
